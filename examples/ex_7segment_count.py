@@ -15,15 +15,6 @@ segment.begin()
 
 print "Press CTRL+Z to exit"
 
-def clearDisplay():
-   segment.clear()
-  # Set hours
-  segment.set_digit(0, ' ')     
-  segment.set_digit(1, ' ')         
-  # Set minutes
-  segment.set_digit(2, ' ')   
-  segment.set_digit(3, ' ')  
-
 # Continually update the time on a 4 char, 7-segment display
 counter = 9999
 while(counter>999):
@@ -49,6 +40,5 @@ while(counter>999):
   # Wait a quarter second (less than 1 second to prevent colon blinking getting$
   time.sleep(0.15)
   counter=counter-9
-
-clearDisplay()
+segment.clear()
 
