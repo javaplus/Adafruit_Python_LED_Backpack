@@ -17,7 +17,7 @@ print "Press CTRL+Z to exit"
 
 # Continually update the time on a 4 char, 7-segment display
 counter = 9999
-while(counter>8999):
+while(counter>999):
   
   hour = int(counter/100)
   minute = int(counter % 100)
@@ -38,7 +38,7 @@ while(counter>8999):
   segment.write_display()
 
   # Wait a quarter second (less than 1 second to prevent colon blinking getting$
-  time.sleep(0.25)
-  counter=counter-1
+  time.sleep(0.15)
+  counter=counter-9
 segment.clear()
 
