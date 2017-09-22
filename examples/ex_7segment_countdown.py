@@ -27,18 +27,9 @@ def clearDisplay():
 # Continually update the time on a 4 char, 7-segment display
 counter = 9999
 while(counter>999):
-  
-    hour = int(counter/100)
-    minute = int(counter % 100)
-
-
     segment.clear()
-    # Set hours
-    segment.set_digit(0, int(hour / 10))     # Tens
-    segment.set_digit(1, hour % 10)          # Ones
-    # Set minutes
-    segment.set_digit(2, int(minute / 10))   # Tens
-    segment.set_digit(3, minute % 10)        # Ones
+    segment.print_number_str(counter)
+   
     # Toggle colon
     #segment.set_colon(counter % 2)              # Toggle colon at 1Hz
 
