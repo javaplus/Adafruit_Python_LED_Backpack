@@ -13,7 +13,7 @@ position = sys.argv[2] #get the position on the display to put this.
 
 print "value of argument=" + inputHex
 print "value of position=" + position
-hexValue = int(inputHex, 16)
+hexValue = hex(int(inputHex, 16))
 
 print "Hex value=" + hex(hexValue)
 print "Will display value for 5 seconds"
