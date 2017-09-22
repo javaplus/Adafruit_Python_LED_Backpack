@@ -28,7 +28,7 @@ def clearDisplay():
 counter = 9999
 while(counter>999):
     segment.clear()
-    segment.print_number_str(counter)
+    segment.print_number_str(str(counter))
    
     # Toggle colon
     #segment.set_colon(counter % 2)              # Toggle colon at 1Hz
