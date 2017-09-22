@@ -22,11 +22,12 @@ def clearDisplay():
     # Set minutes
     segment.set_digit(2, " ")
     segment.set_digit(3, " ")
+    segment.write_display()
 
 
 # Continually update the time on a 4 char, 7-segment display
-counter = 9999
-while(counter>999):
+counter = 99.99
+while(counter>9.99):
     segment.clear()
     segment.print_number_str(str(counter))
    
@@ -38,8 +39,8 @@ while(counter>999):
     segment.write_display()
 
     # Wait a quarter second (less than 1 second to prevent colon blinking getting$
-    time.sleep(0.15)
-    counter=counter-9
+    time.sleep(0.05)
+    counter=counter-0.01
 
 clearDisplay()
 
