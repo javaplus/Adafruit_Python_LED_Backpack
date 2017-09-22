@@ -40,7 +40,11 @@ DIGIT_VALUES = {
     'C': 0x39,
     'D': 0x5E,
     'E': 0x79,
-    'F': 0x71
+    'F': 0x71,
+    #'O': 0x5C,
+    'O': 0x63,
+    'S': 0x6D,
+    'G': 0x6F
 }
 
 IDIGIT_VALUES = {
@@ -89,7 +93,7 @@ class SevenSegment(HT16K33.HT16K33):
             return
         # Jump past the colon at position 2 by adding a conditional offset.
         offset = 0 if pos < 2 else 1
-
+           
         # Calculate the correct position depending on orientation
         if self.invert:
             pos = 4-(pos+offset)
